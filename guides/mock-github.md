@@ -83,12 +83,12 @@ Mimic the directory structure that **Sphinx** encounters on the server, giving y
       ```
    2. Create a **fake-github** sub-directory:
       ```bash
-      mkdir fake-github/autokey
+      mkdir -p fake-github/autokey
       ```
    3. Link the local repositories from the **clones** directory into the **fake-github** directory to mimic **GitHub**:
       ```bash
-      cp -r autokey.github.io/* fake-github/
-      cp -r autokey/* fake-github/autokey/
+      cp -a autokey.github.io/. fake-github/
+      cp -a autokey/. fake-github/autokey/
       ```
 2. Run a mock-CI build from within that structure:
    1. Change to the **fake-github** directory:
